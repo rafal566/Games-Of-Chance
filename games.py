@@ -1,3 +1,4 @@
+
 import random
 
 money = 100
@@ -12,16 +13,16 @@ def coin_flip (bet_money, bet_name):
   if bet_money > money:
       print("Your balance excedes bet!")
       return 0
-  if (coin_flip == 1) and (bet_name.lower() == "heads"):
+  if (coin_flip == 1) and (bet_name.title() == "Heads"):
     print('You bet Heads and you won '+ str(bet_money) +'$!')
     return bet_money
-  elif (coin_flip == 2) and (bet_name.lower() == "tails"):
+  elif (coin_flip == 2) and (bet_name.title() == "Tails"):
     print('You bet Tails and you won '+ str(bet_money) +'$!')
     return bet_money
   else:
     print('Your bet was not correct and you lost '+ str(bet_money) +'$!')
     return -bet_money
-
+    
 
 
 #cho_han function
@@ -36,10 +37,10 @@ def cho_han(bet_money, bet_name):
   if bet_money > money:
       print("Your balance excedes bet!")
       return 0
-  if(sum_of_dices % 2 == 0 and bet_name.lower() == "even"):
+  if(sum_of_dices % 2 == 0 and bet_name.title() == "Even"):
     print('You bet Even and you won '+ str(bet_money) +'$!')
     return bet_money
-  elif(sum_of_dices % 2 != 0 and bet_name.lower() == "odd"):
+  elif(sum_of_dices % 2 != 0 and bet_name.title() == "Odd"):
     print('You bet Odd and you won '+ str(bet_money) +'$!')
     return bet_money
   else:
@@ -98,9 +99,9 @@ def roulette(bet_money, bet):
     return -bet_money
 
 # Call your game of chance functions here
-money += coin_flip(10, "Tails");
+money += coin_flip(10, "taiLS");
 print('Your balance is :' +  str(money))
-money += cho_han(10, "Odd");
+money += cho_han(10, "oDd");
 print('Your balance is :' +  str(money))
 money += card_choice(10)
 print('Your balance is :' +  str(money))
